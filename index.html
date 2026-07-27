@@ -6,488 +6,98 @@
     <title>Haq Security & Cleaning Service Plc | Professional Facility Management in Addis Ababa</title>
     <meta name="description" content="Leading security and cleaning service provider in Addis Ababa, Ethiopia. Licensed, insured, and committed to excellence.">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; }
+        a { text-decoration: none; }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f8f9fa;
-        }
+        /* Top Bar */
+        .top-bar { background: #1e3c72; color: white; padding: 0.5rem 0; font-size: 0.9rem; }
+        .top-bar-content { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        .top-bar a { color: white; margin-left: 1.5rem; transition: opacity 0.3s; }
+        .top-bar a:hover { opacity: 0.8; }
 
         /* Header & Navigation */
-        .top-bar {
-            background: #1e3c72;
-            color: white;
-            padding: 0.5rem 0;
-            font-size: 0.9rem;
-        }
+        header { background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        nav { max-width: 1200px; margin: 0 auto; padding: 1rem 20px; display: flex; justify-content: space-between; align-items: center; }
+        
+        /* UPDATED LOGO STYLES */
+        .logo { display: flex; align-items: center; gap: 0.8rem; }
+        .logo img { height: 55px; width: auto; }
+        .logo-text h1 { color: #1e3c72; font-size: 1.3rem; line-height: 1.1; }
+        .logo-text span { color: #666; font-size: 0.75rem; }
 
-        .top-bar-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .top-bar a {
-            color: white;
-            text-decoration: none;
-            margin-left: 1.5rem;
-            transition: opacity 0.3s;
-        }
-
-        .top-bar a:hover {
-            opacity: 0.8;
-        }
-
-        header {
-            background: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .logo-icon {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-            font-size: 1.5rem;
-        }
-
-        .logo-text h1 {
-            color: #1e3c72;
-            font-size: 1.5rem;
-            line-height: 1.2;
-        }
-
-        .logo-text span {
-            color: #666;
-            font-size: 0.8rem;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            color: #333;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-            position: relative;
-        }
-
-        .nav-links a:hover {
-            color: #2a5298;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: #2a5298;
-            transition: width 0.3s;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: #1e3c72;
-        }
+        .nav-links { display: flex; list-style: none; gap: 2rem; }
+        .nav-links a { color: #333; font-weight: 500; transition: color 0.3s; }
+        .nav-links a:hover { color: #2a5298; }
+        .mobile-menu-btn { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: #1e3c72; }
 
         /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, rgba(30, 60, 114, 0.9) 0%, rgba(42, 82, 152, 0.9) 100%), 
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23f0f0f0" width="1200" height="600"/><path fill="%23ddd" d="M0 300h1200v300H0z"/></svg>');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 6rem 20px;
-            text-align: center;
-        }
+        .hero { background: linear-gradient(135deg, rgba(30, 60, 114, 0.9) 0%, rgba(42, 82, 152, 0.9) 100%), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23f0f0f0" width="1200" height="600"/></svg>'); background-size: cover; background-position: center; color: white; padding: 6rem 20px; text-align: center; }
+        .hero-content { max-width: 800px; margin: 0 auto; }
+        .hero h2 { font-size: 3rem; margin-bottom: 1rem; line-height: 1.2; }
+        .hero p { font-size: 1.3rem; margin-bottom: 2rem; opacity: 0.95; }
+        .hero-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .hero h2 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            line-height: 1.2;
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            opacity: 0.95;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-
-        .btn-primary {
-            background: white;
-            color: #1e3c72;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            border-color: white;
-        }
-
-        .btn-secondary:hover {
-            background: white;
-            color: #1e3c72;
-        }
+        /* Buttons */
+        .btn { display: inline-block; padding: 1rem 2rem; border-radius: 50px; font-weight: 600; transition: all 0.3s ease; border: 2px solid transparent; cursor: pointer; font-size: 1rem; }
+        .btn-primary { background: white; color: #1e3c72; }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
+        .btn-secondary { background: transparent; color: white; border-color: white; }
+        .btn-secondary:hover { background: white; color: #1e3c72; }
 
         /* Trust Bar */
-        .trust-bar {
-            background: white;
-            padding: 2rem 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
+        .trust-bar { background: white; padding: 2rem 0; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .trust-content { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 2rem; }
+        .trust-item { display: flex; align-items: center; gap: 0.5rem; color: #1e3c72; font-weight: 600; }
 
-        .trust-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 2rem;
-        }
+        /* Services & Sections */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .section { padding: 5rem 0; }
+        .section-title { text-align: center; margin-bottom: 3rem; }
+        .section-title h2 { color: #1e3c72; font-size: 2.5rem; margin-bottom: 1rem; }
+        .section-title p { color: #666; font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+        
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .service-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.1); transition: transform 0.3s ease; }
+        .service-card:hover { transform: translateY(-10px); }
+        .service-icon { height: 200px; background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); display: flex; align-items: center; justify-content: center; font-size: 4rem; }
+        .service-content { padding: 2rem; }
+        .service-content h3 { color: #1e3c72; font-size: 1.5rem; margin-bottom: 1rem; }
+        .service-content p { color: #666; margin-bottom: 1.5rem; }
+        .service-link { color: #2a5298; font-weight: 600; }
 
-        .trust-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: #1e3c72;
-            font-weight: 600;
-        }
+        /* Advantages */
+        .advantages-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem; }
+        .advantage-item { text-align: center; padding: 2rem; border-radius: 10px; background: #f8f9fa; transition: transform 0.3s; }
+        .advantage-item:hover { transform: translateY(-5px); }
+        .advantage-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .advantage-item h3 { color: #1e3c72; margin-bottom: 0.5rem; }
 
-        .trust-item svg {
-            width: 30px;
-            height: 30px;
-        }
+        /* Audience */
+        .audience { padding: 5rem 0; background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; text-align: center; }
+        .audience h2 { font-size: 2.5rem; margin-bottom: 3rem; }
+        .audience-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; max-width: 1000px; margin: 0 auto; }
+        .audience-item { background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 10px; backdrop-filter: blur(10px); }
 
-        /* Services Section */
-        .services {
-            padding: 5rem 0;
-            background: #f8f9fa;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .section-title h2 {
-            color: #1e3c72;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .section-title p {
-            color: #666;
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .service-card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-        }
-
-        .service-icon {
-            height: 200px;
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-        }
-
-        .service-content {
-            padding: 2rem;
-        }
-
-        .service-content h3 {
-            color: #1e3c72;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .service-content p {
-            color: #666;
-            margin-bottom: 1.5rem;
-        }
-
-        .service-link {
-            color: #2a5298;
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: gap 0.3s;
-        }
-
-        .service-link:hover {
-            gap: 1rem;
-        }
-
-        /* Advantages Section */
-        .advantages {
-            padding: 5rem 0;
-            background: white;
-        }
-
-        .advantages-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .advantage-item {
-            text-align: center;
-            padding: 2rem;
-            border-radius: 10px;
-            background: #f8f9fa;
-            transition: transform 0.3s;
-        }
-
-        .advantage-item:hover {
-            transform: translateY(-5px);
-            background: #e9ecef;
-        }
-
-        .advantage-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .advantage-item h3 {
-            color: #1e3c72;
-            margin-bottom: 0.5rem;
-        }
-
-        /* Target Audience */
-        .audience {
-            padding: 5rem 0;
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            color: white;
-            text-align: center;
-        }
-
-        .audience h2 {
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-        }
-
-        .audience-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .audience-item {
-            background: rgba(255,255,255,0.1);
-            padding: 2rem;
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
-            transition: transform 0.3s;
-        }
-
-        .audience-item:hover {
-            transform: translateY(-5px);
-            background: rgba(255,255,255,0.2);
-        }
-
-        .audience-item svg {
-            width: 50px;
-            height: 50px;
-            margin-bottom: 1rem;
-        }
-
-        /* CTA Section */
-        .cta {
-            padding: 5rem 0;
-            background: #f8f9fa;
-            text-align: center;
-        }
-
-        .cta h2 {
-            color: #1e3c72;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .cta p {
-            color: #666;
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+        /* CTA */
+        .cta { padding: 5rem 0; background: #f8f9fa; text-align: center; }
+        .cta h2 { color: #1e3c72; font-size: 2.5rem; margin-bottom: 1rem; }
+        .cta p { color: #666; font-size: 1.2rem; margin-bottom: 2rem; }
 
         /* Footer */
-        footer {
-            background: #1e3c72;
-            color: white;
-            padding: 3rem 0 1rem;
-        }
+        footer { background: #1e3c72; color: white; padding: 3rem 0 1rem; }
+        .footer-content { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 2rem; }
+        .footer-section h3 { margin-bottom: 1rem; color: white; }
+        .footer-section p, .footer-section a { color: rgba(255,255,255,0.8); line-height: 1.8; }
+        .footer-section a:hover { color: white; }
+        .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.6); font-size: 0.9rem; }
 
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-section h3 {
-            margin-bottom: 1rem;
-            color: white;
-        }
-
-        .footer-section p, .footer-section a {
-            color: rgba(255,255,255,0.8);
-            text-decoration: none;
-            line-height: 1.8;
-        }
-
-        .footer-section a:hover {
-            color: white;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            color: rgba(255,255,255,0.6);
-            font-size: 0.9rem;
-        }
-
-        /* Responsive */
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .mobile-menu-btn {
-                display: block;
-            }
-
-            .hero h2 {
-                font-size: 2rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .top-bar-content {
-                flex-direction: column;
-                text-align: center;
-                gap: 0.5rem;
-            }
-
-            .top-bar a {
-                margin: 0 0.5rem;
-            }
+            .nav-links { display: none; }
+            .mobile-menu-btn { display: block; }
+            .hero h2 { font-size: 2rem; }
+            .top-bar-content { flex-direction: column; text-align: center; gap: 0.5rem; }
+            .top-bar a { margin: 0 0.5rem; }
         }
     </style>
 </head>
@@ -496,7 +106,7 @@
     <div class="top-bar">
         <div class="top-bar-content">
             <div>
-                <span> +251-986692425</span>
+                <span>📞 +251-986692425</span>
                 <span style="margin-left: 1.5rem;">✉️ info@haqsec.com</span>
             </div>
             <div>
@@ -510,8 +120,9 @@
     <!-- Header & Navigation -->
     <header>
         <nav>
+            <!-- UPDATED LOGO SECTION -->
             <div class="logo">
-                <div class="logo-icon">H</div>
+                <img src="logo.png" alt="Haq Security & Cleaning Service Plc Logo">
                 <div class="logo-text">
                     <h1>Haq Security & Cleaning</h1>
                     <span>Service Plc</span>
@@ -544,23 +155,14 @@
     <!-- Trust Bar -->
     <div class="trust-bar">
         <div class="trust-content">
-            <div class="trust-item">
-                <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                <span>Licensed by EFP</span>
-            </div>
-            <div class="trust-item">
-                <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                <span>100% Background Checked Staff</span>
-            </div>
-            <div class="trust-item">
-                <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                <span>Fully Insured</span>
-            </div>
+            <div class="trust-item">🛡️ Licensed by EFP</div>
+            <div class="trust-item">✓ 100% Background Checked Staff</div>
+            <div class="trust-item"> Fully Insured</div>
         </div>
     </div>
 
     <!-- Services Section -->
-    <section class="services">
+    <section class="section">
         <div class="container">
             <div class="section-title">
                 <h2>Our Services</h2>
@@ -576,7 +178,7 @@
                     </div>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🧹</div>
+                    <div class="service-icon"></div>
                     <div class="service-content">
                         <h3>Cleaning Services</h3>
                         <p>Eco-friendly cleaning solutions for offices, banks, embassies, construction sites, and residential homes with trained professionals.</p>
@@ -588,7 +190,7 @@
     </section>
 
     <!-- Advantages Section -->
-    <section class="advantages">
+    <section class="section" style="background: white;">
         <div class="container">
             <div class="section-title">
                 <h2>The Haq Advantage</h2>
@@ -624,26 +226,11 @@
         <div class="container">
             <h2>Trusted By</h2>
             <div class="audience-grid">
-                <div class="audience-item">
-                    <svg fill="currentColor" viewBox="0 0 20 20"><path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"/><path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd"/></svg>
-                    <h3>Offices</h3>
-                </div>
-                <div class="audience-item">
-                    <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-2a1 1 0 00-1-1H9a1 1 0 00-1 1v2a1 1 0 01-1 1H4a1 1 0 110-2V4zm3 1h2v2H7V5zm2 4H7v2h2V9zm2-4h2v2h-2V5zm2 4h-2v2h2V9z" clip-rule="evenodd"/></svg>
-                    <h3>Banks</h3>
-                </div>
-                <div class="audience-item">
-                    <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                    <h3>Embassies</h3>
-                </div>
-                <div class="audience-item">
-                    <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
-                    <h3>Construction Sites</h3>
-                </div>
-                <div class="audience-item">
-                    <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L9 9.586 7.707 8.293a1 1 0 00-1.414 0l-2 2a1 1 0 101.414 1.414L8 9.414l4.293 4.293a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                    <h3>Residential Homes</h3>
-                </div>
+                <div class="audience-item"><h3>🏢 Offices</h3></div>
+                <div class="audience-item"><h3>🏦 Banks</h3></div>
+                <div class="audience-item"><h3>️ Embassies</h3></div>
+                <div class="audience-item"><h3>🏗️ Construction Sites</h3></div>
+                <div class="audience-item"><h3>🏠 Residential Homes</h3></div>
             </div>
         </div>
     </section>
@@ -673,28 +260,20 @@
             </div>
             <div class="footer-section">
                 <h3>Contact Info</h3>
-                <p>📍 Yeka, Addis Ababa, Ethiopia</p>
-                <p>📞 +251-986692425</p>
-                <p>✉️ info@haqsec.com</p>
-                <p> Mon-Sat: 8:00 AM - 5:00 PM</p>
+                <p>📍 Yeka, Woreda 07, House No. 173, Addis Ababa</p>
+                <p> +251-986692425</p>
+                <p>️ info@haqsec.com</p>
+                <p>🕐 Mon-Sat: 8:00 AM - 5:00 PM</p>
             </div>
             <div class="footer-section">
                 <h3>Legal</h3>
                 <p>TIN: 0104478359</p>
                 <p>License: AACATB/14/672/50209832/2018</p>
-                <p><a href="about.html" style="text-decoration: underline;">View License</a></p>
             </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2026 Haq Security & Cleaning Service Plc. All Rights Reserved.</p>
         </div>
     </footer>
-
-    <script>
-        // Mobile menu toggle
-        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
-            alert('Mobile menu would toggle here - add mobile navigation logic');
-        });
-    </script>
 </body>
 </html>
