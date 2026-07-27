@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Haq Security & Cleaning Service Plc</title>
+    <meta name="description" content="Learn about Haq Security & Cleaning Service Plc - licensed, insured facility management company in Addis Ababa, Ethiopia.">
+    <style>
+        /* =========================================
+           GLOBAL & RESET STYLES
+           ========================================= */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; }
+        a { text-decoration: none; }
+        ul { list-style: none; }
+
+        /* =========================================
+           HEADER & NAVIGATION
+           ========================================= */
+        .top-bar { background: #1e3c72; color: white; padding: 0.5rem 0; font-size: 0.9rem; }
+        .top-bar-content { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        .top-bar a { color: white; margin-left: 1.5rem; transition: opacity 0.3s; }
+        .top-bar a:hover { opacity: 0.8; }
+
+        header { background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        nav { max-width: 1200px; margin: 0 auto; padding: 1rem 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; align-items: center; gap: 1rem; }
+        .logo-icon { width: 50px; height: 50px; background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.5rem; }
+        .logo-text h1 { color: #1e3c72; font-size: 1.5rem; line-height: 1.2; }
+        .logo-text span { color: #666; font-size: 0.8rem; }
+        .nav-links { display: flex; gap: 2rem; }
+        .nav-links a { color: #333; font-weight: 500; transition: color 0.3s; }
+        .nav-links a:hover { color: #2a5298; }
+
+        /* =========================================
+           PAGE HEADERS & LAYOUT
+           ========================================= */
+        .page-header { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; padding: 4rem 0 3rem; text-align: center; }
+        .page-header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .breadcrumb { opacity: 0.9; }
+        .breadcrumb a { color: white; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .section { padding: 4rem 0; }
+        .section-white { background: white; }
+        .section-gray { background: #f8f9fa; }
+        .section-title { color: #1e3c72; font-size: 2rem; margin-bottom: 1.5rem; text-align: center; }
+
+        /* =========================================
+           ABOUT CONTENT & VALUES
+           ========================================= */
+        .about-content { max-width: 800px; margin: 0 auto; text-align: center; font-size: 1.1rem; line-height: 1.8; color: #555; }
+        .about-content p { margin-bottom: 1.5rem; }
+        
+        .leadership { background: white; padding: 3rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); max-width: 700px; margin: 3rem auto 0; text-align: center; }
+        .leadership-icon { font-size: 4rem; margin-bottom: 1rem; }
+        .leadership h3 { color: #1e3c72; font-size: 1.5rem; margin-bottom: 0.5rem; }
+        .leadership .title { color: #666; font-style: italic; margin-bottom: 1rem; }
+
+        .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem; }
+        .value-card { background: white; padding: 2rem; border-radius: 10px; text-align: center; box-shadow: 0 3px 15px rgba(0,0,0,0.08); transition: transform 0.3s; }
+        .value-card:hover { transform: translateY(-5px); }
+        .value-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+        .value-card h3 { color: #1e3c72; margin-bottom: 0.5rem; }
+
+        /* =========================================
+           LICENSE SECTION & MODAL
+           ========================================= */
+        .license-section { padding: 5rem 0; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); }
+        .license-card { background: white; border-radius: 15px; padding: 3rem; max-width: 700px; margin: 0 auto; box-shadow: 0 10px 40px rgba(0,0,0,0.1); text-align: center; }
+        .license-icon { font-size: 4rem; margin-bottom: 1rem; }
+        .license-title { color: #1e3c72; font-size: 2rem; margin-bottom: 1rem; }
+        .license-description { color: #666; margin-bottom: 2rem; font-size: 1.05rem; line-height: 1.6; }
+        
+        .license-badge { display: inline-block; background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; padding: 1rem 2.5rem; border-radius: 50px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; border: none; font-size: 1.05rem; margin-bottom: 1rem; box-shadow: 0 5px 15px rgba(42, 82, 152, 0.3); }
+        .license-badge:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(42, 82, 152, 0.4); }
+
+        .license-modal { display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.95); animation: fadeIn 0.3s ease; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        
+        .modal-content { position: relative; margin: 2% auto; padding: 0; width: 90%; max-width: 900px; background: white; border-radius: 15px; overflow: hidden; animation: slideDown 0.3s ease; max-height: 90vh; overflow-y: auto; }
+        @keyframes slideDown { from { transform: translateY(-50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        
+        .modal-header { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; padding: 1.5rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .modal-header h2 { font-size: 1.5rem; margin: 0; }
+        .close-btn { color: white; font-size: 2.5rem; font-weight: bold; cursor: pointer; transition: all 0.3s; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; border-radius: 50%; line-height: 1; }
+        .close-btn:hover { background: rgba(255,255,255,0.2); transform: rotate(90deg); }
+        
+        .modal-body { padding: 2rem; }
+        .license-info-box { background: #f8f9fa; border-left: 5px solid #2a5298; padding: 2rem; margin-bottom: 2rem; border-radius: 8px; }
+        .license-info-box h3 { color: #1e3c72; margin-bottom: 1.5rem; font-size: 1.3rem; }
+        .license-details { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+        .license-detail-item { display: flex; flex-direction: column; }
+        .license-detail-label { font-weight: 600; color: #666; font-size: 0.85rem; margin-bottom: 0.3rem; text-transform: uppercase; letter-spacing: 0.5px; }
+        .license-detail-value { color: #1e3c72; font-weight: 600; font-size: 1rem; word-break: break-word; }
+
+        /* Protected Image Viewer */
+        .license-viewer { position: relative; background: #fff; border: 3px solid #e0e0e0; border-radius: 10px; overflow: hidden; margin-bottom: 1.5rem; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+        .watermarked-container { position: relative; user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; }
+        .watermarked-container img { width: 100%; height: auto; display: block; pointer-events: none; -webkit-user-drag: none; user-drag: none; filter: brightness(0.95) contrast(0.98); }
+        .watermark { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-45deg); font-size: 2.5rem; font-weight: bold; color: rgba(255, 0, 0, 0.2); pointer-events: none; z-index: 10; white-space: nowrap; text-transform: uppercase; letter-spacing: 5px; border: 4px solid rgba(255, 0, 0, 0.2); padding: 30px 50px; user-select: none; text-align: center; line-height: 1.4; }
+        .watermark-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255, 0, 0, 0.03) 10px, rgba(255, 0, 0, 0.03) 20px); pointer-events: none; z-index: 5; }
+        .protection-notice { background: #fff3cd; border: 2px solid #ffc107; color: #856404; padding: 1.2rem; border-radius: 8px; font-size: 0.95rem; text-align: center; margin-top: 1rem; }
+        .protection-notice strong { display: block; margin-bottom: 0.5rem; font-size: 1.05rem; }
+
+        /* =========================================
+           FOOTER & RESPONSIVE
+           ========================================= */
+        footer { background: #1e3c72; color: white; padding: 3rem 0 1rem; }
+        .footer-content { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 2rem; }
+        .footer-section h3 { margin-bottom: 1rem; color: white; }
+        .footer-section p, .footer-section a { color: rgba(255,255,255,0.8); text-decoration: none; line-height: 1.8; }
+        .footer-section a:hover { color: white; }
+        .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.6); font-size: 0.9rem; }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .license-details { grid-template-columns: 1fr; }
+            .watermark { font-size: 1.5rem; padding: 15px 25px; }
+            .modal-content { width: 95%; margin: 5% auto; }
+            .page-header h1 { font-size: 2rem; }
+        }
+        .no-select { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <div>
+                <span>📞 +251-986692425</span>
+                <span style="margin-left: 1.5rem;">✉️ info@haqsec.com</span>
+            </div>
+            <div>
+                <a href="contact.html">Get a Quote</a>
+                <a href="careers.html">Careers</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <div class="logo-icon">H</div>
+                <div class="logo-text">
+                    <h1>Haq Security & Cleaning</h1>
+                    <span>Service Plc</span>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="security.html">Security Services</a></li>
+                <li><a href="cleaning.html">Cleaning Services</a></li>
+                <li><a href="why-haq.html">Why Haq?</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <h1>About Haq</h1>
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> > About Us
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="section section-white">
+        <div class="container">
+            <h2 class="section-title">Who We Are</h2>
+            <div class="about-content">
+                <p><strong>Haq Security & Cleaning Service Plc</strong> is a fully licensed and insured facility management company based in Addis Ababa, Ethiopia. We provide comprehensive security and cleaning solutions to offices, banks, embassies, construction sites, and residential homes.</p>
+                <p>Under the leadership of our General Manager, <strong>Mrs. Lamrot Kinetibeb Cherkos</strong>, we are committed to delivering professional, reliable, and accountable services. All our staff are thoroughly background-checked, professionally trained in-house, and dedicated to maintaining the highest standards of service.</p>
+                <p>Our dual-service approach allows us to offer integrated facility management solutions, providing our clients with convenience, consistency, and cost-effectiveness.</p>
+            </div>
+
+            <div class="leadership">
+                <div class="leadership-icon"></div>
+                <h3>Mrs. Lamrot Kinetibeb Cherkos</h3>
+                <p class="title">General Manager</p>
+                <p>Leading Haq Security & Cleaning Service Plc with vision, integrity, and commitment to excellence in facility management.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="section section-gray">
+        <div class="container">
+            <h2 class="section-title">Our Core Values</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">🛡️</div>
+                    <h3>Security</h3>
+                    <p>Licensed by the Federal Police and committed to protecting your assets with professionalism.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"></div>
+                    <h3>Sustainability</h3>
+                    <p>Using eco-friendly cleaning products that are safe for people and the environment.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">📚</div>
+                    <h3>Excellence</h3>
+                    <p>100% in-house trained staff ensuring consistent quality across all services.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🤝</div>
+                    <h3>Accountability</h3>
+                    <p>We stand behind our work and take responsibility for our service delivery.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- License Verification Section -->
+    <section class="license-section">
+        <div class="container">
+            <div class="license-card">
+                <div class="license-icon">🛡️</div>
+                <h2 class="license-title">Licensed & Verified</h2>
+                <p class="license-description">
+                    We are a legally registered and licensed company operating under the regulations of the Addis Ababa City Administration Trade Bureau. Our credentials are verified and up-to-date.
+                </p>
+                <button class="license-badge" onclick="openLicenseModal()">
+                    🔍 View Business License
+                </button>
+                <p class="license-note" style="font-size: 0.9rem; color: #999; margin-top: 1rem;">
+                    Click above to verify our business license (view-only, protected document)
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- License Modal -->
+    <div id="licenseModal" class="license-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>📄 Business License Verification</h2>
+                <span class="close-btn" onclick="closeLicenseModal()">&times;</span>
+            </div>
+            
+            <div class="modal-body">
+                <!-- License Information (Exact Data from PDF) -->
+                <div class="license-info-box">
+                    <h3>Official Registration Details</h3>
+                    <div class="license-details">
+                        <div class="license-detail-item">
+                            <span class="license-detail-label">Company Name</span>
+                            <span class="license-detail-value">HAQ SECURITY AND CLEANING SERVICE P L C</span>
+                        </div>
+                        <div class="license-detail-item">
+                            <span class="license-detail-label">General Manager</span>
+                            <span class="license-detail-value">Mrs. Lamrot Kinetibeb Cherkos</span>
+                        </div>
+                        <div class="license-detail-item">
+                            <span class="license-detail-label">TIN (Tax ID)</span>
+                            <span class="license-detail-value">0104478359</span>
+                        </div>
+                        <div class="license-detail-item">
+                            <span class="license-detail-label">Principal Registration No.</span>
+                            <span class="license-detail-value">AACATB/2/0255245/2018</span>
+                        </div>
+                        <div class="license-detail-item">
+                            <span class="license-detail-label">Business License No.</span>
+                            <span class="license-detail-value">AACATB/14/672/50209832/2018</span>
+                        </div>
+                        <div class="license-detail-item">
+                            <span class="license-detail-label">Date of Issuance</span>
+                            <span class="license-detail-value">16/5/2018</span>
+                        </div>
+                        <div class="license-detail-item">
+                            <span class="license-detail-label">Modification Date</span>
+                            <span class="license-detail-value">25/7/2018</span>
+                        </div>
+                        <div class="license-detail-item">
+                            <span class="license-detail-label">Issuing Authority</span>
+                            <span class="license-detail-value">Addis Ababa City Administration Trade Bureau</span>
+                        </div>
+                        <div class="license-detail-item">
+                            <span class="license-detail-label">Field of Business</span>
+                            <span class="license-detail-value">Security and Cleaning Service</span>
+                        </div>
+                        <div class="license-detail-item">
+                            <span class="license-detail-label">Capital</span>
+                            <span class="license-detail-value">ETB 1,500,000.00</span>
+                        </div>
+                        <div class="license-detail-item">
+                            <span class="license-detail-label">Registered Address</span>
+                            <span class="license-detail-value">Yeka, Woreda 07, House No. 173, Addis Ababa</span>
+                        </div>
+                        <div class="license-detail-item">
+                            <span class="license-detail-label">Nationality</span>
+                            <span class="license-detail-value">Registered in Ethiopia</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Protected License Image Viewer -->
+                <div class="license-viewer no-select" id="licenseViewer">
+                    <div class="watermarked-container" oncontextmenu="return false;">
+                        <!-- IMPORTANT: Replace 'license.jpg' with your actual license image file -->
+                        <img src="license.jpg" 
+                             alt="Haq Security Business License - Verification Copy" 
+                             oncontextmenu="return false;" 
+                             ondragstart="return false;"
+                             id="licenseImage">
+                        <div class="watermark">HAQ SECURITY<br>VERIFICATION COPY</div>
+                        <div class="watermark-overlay"></div>
+                    </div>
+                </div>
+
+                <!-- Protection Notice -->
+                <div class="protection-notice">
+                    <strong>🔒 Protected Document</strong>
+                    This is a view-only verification copy. Downloading, copying, or reproduction is prohibited. 
+                    This document is for verification purposes only.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Haq Security & Cleaning</h3>
+                <p>Professional facility management services in Addis Ababa, Ethiopia. Licensed, insured, and committed to excellence.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <p><a href="index.html">Home</a></p>
+                <p><a href="security.html">Security Services</a></p>
+                <p><a href="cleaning.html">Cleaning Services</a></p>
+                <p><a href="careers.html">Careers</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>📍 Yeka, Woreda 07, House No. 173, Addis Ababa</p>
+                <p>📞 +251-986692425</p>
+                <p>✉️ info@haqsec.com</p>
+                <p>🕐 Mon-Sat: 8:00 AM - 5:00 PM</p>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <p>TIN: 0104478359</p>
+                <p>License: AACATB/14/672/50209832/2018</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Haq Security & Cleaning Service Plc. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // =========================================
+        // LICENSE MODAL & PROTECTION SCRIPTS
+        // =========================================
+        function openLicenseModal() {
+            document.getElementById('licenseModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+            addProtectionListeners();
+            setTimeout(addDynamicWatermark, 100);
+        }
+
+        function closeLicenseModal() {
+            document.getElementById('licenseModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+            removeProtectionListeners();
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('licenseModal');
+            if (event.target == modal) { closeLicenseModal(); }
+        }
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') { closeLicenseModal(); }
+        });
+
+        function addProtectionListeners() {
+            const viewer = document.getElementById('licenseViewer');
+            const img = document.getElementById('licenseImage');
+            if (!viewer || !img) return;
+            
+            viewer.addEventListener('contextmenu', e => e.preventDefault());
+            img.addEventListener('dragstart', e => e.preventDefault());
+            viewer.addEventListener('selectstart', e => e.preventDefault());
+            document.addEventListener('keydown', disableSaveShortcuts);
+            img.addEventListener('touchstart', e => e.preventDefault(), { passive: false });
+        }
+
+        function removeProtectionListeners() {
+            document.removeEventListener('keydown', disableSaveShortcuts);
+        }
+
+        function disableSaveShortcuts(e) {
+            if ((e.ctrlKey && ['s', 'S', 'p', 'P', 'u', 'U'].includes(e.key)) || e.key === 'F12') {
+                e.preventDefault(); return false;
+            }
+        }
+
+        function addDynamicWatermark() {
+            const viewer = document.getElementById('licenseViewer');
+            if (!viewer) return;
+            viewer.querySelectorAll('.dynamic-watermark').forEach(w => w.remove());
+            
+            for (let i = 0; i < 5; i++) {
+                const watermark = document.createElement('div');
+                watermark.className = 'dynamic-watermark';
+                watermark.textContent = 'HAQ SECURITY - VERIFICATION ONLY';
+                watermark.style.cssText = `
+                    position: absolute; top: ${Math.random() * 100}%; left: ${Math.random() * 100}%;
+                    transform: rotate(${Math.random() * 360}deg); font-size: ${1 + Math.random()}rem;
+                    color: rgba(255, 0, 0, ${0.05 + Math.random() * 0.05}); pointer-events: none;
+                    z-index: 3; white-space: nowrap; user-select: none;
+                `;
+                viewer.appendChild(watermark);
+            }
+        }
+    </script>
+</body>
+</html>

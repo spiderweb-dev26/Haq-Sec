@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Choose Haq - Haq Security & Cleaning Service Plc</title>
+    <meta name="description" content="Discover why Haq Security & Cleaning Service is the trusted choice for facility management in Addis Ababa. Licensed, insured, and committed to excellence.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .top-bar {
+            background: #1e3c72;
+            color: white;
+            padding: 0.5rem 0;
+            font-size: 0.9rem;
+        }
+
+        .top-bar-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .top-bar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 1.5rem;
+            transition: opacity 0.3s;
+        }
+
+        .top-bar a:hover {
+            opacity: 0.8;
+        }
+
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .logo-text h1 {
+            color: #1e3c72;
+            font-size: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .logo-text span {
+            color: #666;
+            font-size: 0.8rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #2a5298;
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 4rem 0 3rem;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .breadcrumb {
+            opacity: 0.9;
+        }
+
+        .breadcrumb a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section-white {
+            background: white;
+        }
+
+        .section-gray {
+            background: #f8f9fa;
+        }
+
+        .section-title {
+            color: #1e3c72;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .intro-box {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 15px;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .intro-box h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .intro-box p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .advantage-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+
+        .advantage-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .advantage-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .advantage-card h3 {
+            color: #1e3c72;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .advantage-card p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .dual-service-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 3rem;
+            border-radius: 15px;
+            margin: 4rem 0;
+            text-align: center;
+        }
+
+        .dual-service-box h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .dual-service-box p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .benefits-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+            text-align: left;
+        }
+
+        .benefit-item {
+            background: rgba(255,255,255,0.15);
+            padding: 1.5rem;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .benefit-item h4 {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .benefit-item p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        .comparison-section {
+            background: white;
+            padding: 4rem 0;
+        }
+
+        .comparison-table {
+            width: 100%;
+            max-width: 900px;
+            margin: 3rem auto;
+            border-collapse: collapse;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .comparison-table th {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 1.5rem;
+            text-align: left;
+            font-size: 1.1rem;
+        }
+
+        .comparison-table td {
+            padding: 1.2rem 1.5rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .comparison-table tr:hover {
+            background: #e9ecef;
+        }
+
+        .check {
+            color: #28a745;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        .faq-section {
+            background: #f8f9fa;
+            padding: 4rem 0;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            background: white;
+            cursor: pointer;
+            font-weight: 600;
+            color: #1e3c72;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 4rem 2rem;
+            border-radius: 15px;
+            text-align: center;
+            margin: 4rem 0;
+        }
+
+        .cta-box h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-box p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-white {
+            background: white;
+            color: #1e3c72;
+        }
+
+        .btn-white:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        footer {
+            background: #1e3c72;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .footer-section p, .footer-section a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            line-height: 1.8;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .advantages-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .comparison-table {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <div>
+                <span>📞 +251-986692425</span>
+                <span style="margin-left: 1.5rem;">✉️ info@haqsec.com</span>
+            </div>
+            <div>
+                <a href="contact.html">Get a Quote</a>
+                <a href="careers.html">Careers</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <div class="logo-icon">H</div>
+                <div class="logo-text">
+                    <h1>Haq Security & Cleaning</h1>
+                    <span>Service Plc</span>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="security.html">Security Services</a></li>
+                <li><a href="cleaning.html">Cleaning Services</a></li>
+                <li><a href="why-haq.html">Why Haq?</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="page-header">
+        <h1>Why Choose Haq?</h1>
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> > Why Choose Haq
+        </div>
+    </div>
+
+    <section class="section section-white">
+        <div class="container">
+            <div class="intro-box">
+                <h2>The Haq Difference</h2>
+                <p>We're not just another service provider. We're your trusted partner in creating safe, clean, and productive environments. Here's what sets us apart.</p>
+            </div>
+
+            <h2 class="section-title">Our Core Advantages</h2>
+            <p class="section-subtitle">Five pillars that define our commitment to excellence</p>
+
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <div class="advantage-icon">✓</div>
+                    <h3>Background Checked Staff</h3>
+                    <p>Every member of our team undergoes rigorous background checks and verification. Your security and peace of mind are non-negotiable. We only hire individuals we would trust in our own homes and businesses.</p>
+                </div>
+
+                <div class="advantage-card">
+                    <div class="advantage-icon"></div>
+                    <h3>Eco-Friendly Products</h3>
+                    <p>We use environmentally safe cleaning products that are tough on dirt but gentle on the planet. Our green cleaning approach ensures a healthy environment for your family, employees, and customers without harmful chemicals.</p>
+                </div>
+
+                <div class="advantage-card">
+                    <div class="advantage-icon">📚</div>
+                    <h3>100% In-House Training</h3>
+                    <p>All our staff are trained by Haq to our exacting standards. We don't outsource training - we ensure every team member understands our protocols, values, and commitment to excellence before they ever step onto your property.</p>
+                </div>
+
+                <div class="advantage-card">
+                    <div class="advantage-icon">🤝</div>
+                    <h3>Polite & Professional</h3>
+                    <p>Our team represents your business when they're on-site. We train our staff in professional etiquette, communication, and customer service. They're not just skilled - they're courteous, respectful, and professional.</p>
+                </div>
+
+                <div class="advantage-card">
+                    <div class="advantage-icon">🛡️</div>
+                    <h3>Fully Accountable</h3>
+                    <p>We stand behind our work. Haq takes full accountability for any negligence or service issues. Our commitment to quality means we're responsible for delivering on our promises, every single time.</p>
+                </div>
+            </div>
+
+            <div class="dual-service-box">
+                <h2>🎯 One Provider, Two Solutions</h2>
+                <p>Why juggle multiple vendors when you can have both security and cleaning from one trusted source?</p>
+                
+                <div class="benefits-list">
+                    <div class="benefit-item">
+                        <h4>💰 Cost Effective</h4>
+                        <p>Bundle services and save. One contract, one invoice, simplified billing.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h4> Streamlined Communication</h4>
+                        <p>Single point of contact for all your facility management needs.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h4>🔄 Coordinated Service</h4>
+                        <p>Security and cleaning teams work together seamlessly.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h4>📋 Simplified Management</h4>
+                        <p>Less paperwork, fewer vendors, easier oversight.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="comparison-section">
+                <h2 class="section-title">Haq vs. Others</h2>
+                <p class="section-subtitle">See how we compare to typical service providers</p>
+                
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Haq Security & Cleaning</th>
+                            <th>Typical Providers</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Licensing & Insurance</strong></td>
+                            <td><span class="check">✓</span> Fully licensed by EFP & insured</td>
+                            <td>Varies - often unclear</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Staff Vetting</strong></td>
+                            <td><span class="check">✓</span> 100% background checked</td>
+                            <td>Often minimal screening</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Training</strong></td>
+                            <td><span class="check">✓</span> In-house professional training</td>
+                            <td>On-the-job or minimal</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Products</strong></td>
+                            <td><span class="check">✓</span> Eco-friendly & safe</td>
+                            <td>Standard chemicals</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Accountability</strong></td>
+                            <td><span class="check">✓</span> Full accountability guarantee</td>
+                            <td>Limited or no guarantee</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Service Range</strong></td>
+                            <td><span class="check">✓</span> Security + Cleaning</td>
+                            <td>Usually one service only</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Professionalism</strong></td>
+                            <td><span class="check">✓</span> Trained in etiquette</td>
+                            <td>Varies widely</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="faq-section">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Got questions? We've got answers.</p>
+                
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Are your staff employees or contractors?
+                        </div>
+                        <div class="faq-answer">
+                            <p>All our staff are direct employees of Haq Security & Cleaning Service Plc. We don't use subcontractors or day laborers. This ensures consistent quality, proper training, and full accountability for every team member on your property.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Do you bring your own cleaning equipment and supplies?
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! We provide all necessary cleaning equipment and eco-friendly products. For specialized services or specific client preferences, we can discuss using your supplies, but our standard service includes everything needed for a thorough clean.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            What happens if something is damaged during service?
+                        </div>
+                        <div class="faq-answer">
+                            <p>We are fully insured and accountable for our work. In the rare event of damage, we have a clear reporting and resolution process. Our accountability guarantee means we take responsibility and make things right. Your property is in safe hands.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Can I customize my service schedule?
+                        </div>
+                        <div class="faq-answer">
+                            <p>Absolutely! We understand every client has unique needs. Whether you need daily, weekly, monthly, or one-time service, we'll work with you to create a schedule that fits your requirements and budget.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Are your security guards armed or unarmed?
+                        </div>
+                        <div class="faq-answer">
+                            <p>We offer both armed and unarmed security services depending on your needs and the nature of your property. All armed guards are specially licensed and extensively trained. We'll assess your security requirements and recommend the appropriate level of protection.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            How do I get started with Haq?
+                        </div>
+                        <div class="faq-answer">
+                            <p>It's simple! Contact us for a free consultation and quote. We'll assess your needs, discuss your requirements, and provide a customized proposal with no obligation. Once you're ready, we'll handle all the details to get started quickly and smoothly.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-box">
+                <h2>Experience the Haq Advantage</h2>
+                <p>Join our growing list of satisfied clients who trust Haq for their security and cleaning needs</p>
+                <a href="contact.html" class="btn btn-white">Get Started Today</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Haq Security & Cleaning</h3>
+                <p>Professional facility management services in Addis Ababa, Ethiopia. Licensed, insured, and committed to excellence.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <p><a href="index.html">Home</a></p>
+                <p><a href="about.html">About Us</a></p>
+                <p><a href="security.html">Security Services</a></p>
+                <p><a href="cleaning.html">Cleaning Services</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>📍 Yeka, Addis Ababa, Ethiopia</p>
+                <p>📞 +251-986692425</p>
+                <p>✉️ info@haqsec.com</p>
+                <p>🕐 Mon-Sat: 8:00 AM - 5:00 PM</p>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <p>TIN: 0104478359</p>
+                <p>License: AACATB/14/672/50209832/2018</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Haq Security & Cleaning Service Plc. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
