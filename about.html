@@ -24,10 +24,13 @@
 
         header { background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
         nav { max-width: 1200px; margin: 0 auto; padding: 1rem 20px; display: flex; justify-content: space-between; align-items: center; }
-        .logo { display: flex; align-items: center; gap: 1rem; }
-        .logo-icon { width: 50px; height: 50px; background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.5rem; }
-        .logo-text h1 { color: #1e3c72; font-size: 1.5rem; line-height: 1.2; }
-        .logo-text span { color: #666; font-size: 0.8rem; }
+        
+        /* UPDATED LOGO STYLES */
+        .logo { display: flex; align-items: center; gap: 0.8rem; }
+        .logo img { height: 55px; width: auto; } /* Adjusts to your actual logo image */
+        .logo-text h1 { color: #1e3c72; font-size: 1.3rem; line-height: 1.1; }
+        .logo-text span { color: #666; font-size: 0.75rem; }
+
         .nav-links { display: flex; gap: 2rem; }
         .nav-links a { color: #333; font-weight: 500; transition: color 0.3s; }
         .nav-links a:hover { color: #2a5298; }
@@ -142,8 +145,10 @@
     <!-- Header & Navigation -->
     <header>
         <nav>
+            <!-- UPDATED LOGO SECTION -->
             <div class="logo">
-                <div class="logo-icon">H</div>
+                <!-- IMPORTANT: Save your uploaded logo image as 'logo.png' in the same folder -->
+                <img src="logo.png" alt="Haq Security & Cleaning Service Plc Logo">
                 <div class="logo-text">
                     <h1>Haq Security & Cleaning</h1>
                     <span>Service Plc</span>
@@ -179,7 +184,7 @@
             </div>
 
             <div class="leadership">
-                <div class="leadership-icon"></div>
+                <div class="leadership-icon">👔</div>
                 <h3>Mrs. Lamrot Kinetibeb Cherkos</h3>
                 <p class="title">General Manager</p>
                 <p>Leading Haq Security & Cleaning Service Plc with vision, integrity, and commitment to excellence in facility management.</p>
@@ -198,7 +203,7 @@
                     <p>Licensed by the Federal Police and committed to protecting your assets with professionalism.</p>
                 </div>
                 <div class="value-card">
-                    <div class="value-icon"></div>
+                    <div class="value-icon">🌿</div>
                     <h3>Sustainability</h3>
                     <p>Using eco-friendly cleaning products that are safe for people and the environment.</p>
                 </div>
@@ -239,12 +244,12 @@
     <div id="licenseModal" class="license-modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h2>📄 Business License Verification</h2>
+                <h2> Business License Verification</h2>
                 <span class="close-btn" onclick="closeLicenseModal()">&times;</span>
             </div>
             
             <div class="modal-body">
-                <!-- License Information (Exact Data from PDF) -->
+                <!-- License Information (EXACT Data from Official PDF) -->
                 <div class="license-info-box">
                     <h3>Official Registration Details</h3>
                     <div class="license-details">
@@ -260,6 +265,7 @@
                             <span class="license-detail-label">TIN (Tax ID)</span>
                             <span class="license-detail-value">0104478359</span>
                         </div>
+                        <!-- ADDED: Principal Registration No. from PDF -->
                         <div class="license-detail-item">
                             <span class="license-detail-label">Principal Registration No.</span>
                             <span class="license-detail-value">AACATB/2/0255245/2018</span>
@@ -282,7 +288,7 @@
                         </div>
                         <div class="license-detail-item">
                             <span class="license-detail-label">Field of Business</span>
-                            <span class="license-detail-value">Security and Cleaning Service</span>
+                            <span class="license-detail-value">(86823) Security and Cleaning Service</span>
                         </div>
                         <div class="license-detail-item">
                             <span class="license-detail-label">Capital</span>
@@ -302,7 +308,7 @@
                 <!-- Protected License Image Viewer -->
                 <div class="license-viewer no-select" id="licenseViewer">
                     <div class="watermarked-container" oncontextmenu="return false;">
-                        <!-- IMPORTANT: Replace 'license.jpg' with your actual license image file -->
+                        <!-- IMPORTANT: Save your license image as 'license.jpg' in the same folder -->
                         <img src="license.jpg" 
                              alt="Haq Security Business License - Verification Copy" 
                              oncontextmenu="return false;" 
@@ -340,7 +346,7 @@
             <div class="footer-section">
                 <h3>Contact Info</h3>
                 <p>📍 Yeka, Woreda 07, House No. 173, Addis Ababa</p>
-                <p>📞 +251-986692425</p>
+                <p> +251-986692425</p>
                 <p>✉️ info@haqsec.com</p>
                 <p>🕐 Mon-Sat: 8:00 AM - 5:00 PM</p>
             </div>
